@@ -111,7 +111,6 @@ export default function BasicTabTabs() {
             sx={{
               display: "flex",
               flexDirection: "column",
-
               p:1,
               borderColor: "white",
               borderRadius: 2,
@@ -392,9 +391,8 @@ export default function BasicTabTabs() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              border: 1,
+              p:1,
               borderColor: "white",
-              borderRadius: 2,
               color: "white",
             }}
           >
@@ -475,7 +473,7 @@ export default function BasicTabTabs() {
                       backgroundColor: "lightblue",
                       border: 1,
                       mt: 1,
-                      p: 2,
+                      p: 1,
                       textTransform: "none",
                     }}
                     variant="h3"

@@ -15,25 +15,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContactPageTwoToneIcon from '@mui/icons-material/ContactPageTwoTone';
 
-const drawerWidth = 240;
 
 function Home() {
-  const scollToRef = useRef();
-
-  const ButtonMailto = ({ mailto, label, style }) => {
-    return (
-      <Link
-        href={mailto}
-        onClick={(e) => {
-          window.location.href = mailto;
-          e.preventDefault();
-        }}
-        style={style}
-      >
-        {label}
-      </Link>
-    );
-  };
 
   return (
     <>
@@ -73,16 +56,16 @@ function Home() {
             color: "white",
           }}
         >
-          <Grid container sx={{ justifyContent: "center" }}>
+          <Grid container sx={{display:'flex',flexDirection:'column', justifyContent: "center" }}>
             <Typography variant="h1">Derek Szeto</Typography>
             <Typography variant="h4">Full-Stack Developer</Typography>
-            {/* <Typography>or click below to be routed!</Typography> */}
+            <Typography variant="subtitle1">Atlanta, GA</Typography>
+
           </Grid>
         </Grid>
         <Grid
           textAlign="center"
           sx={{
-            border: 3,
             borderRadius: 2,
             p: 3,
             mr: "auto",
