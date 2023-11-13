@@ -133,7 +133,7 @@ function Home() {
               <Button
                 variant="text"
                 size="small"
-                href="https://github.com/Nic-Horton/initiative-finder"
+                href="https://github.com/MidnightMicro"
               >
                 <img
                   height={80}
