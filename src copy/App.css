@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo .CreateBlog {
+    /* animation: App-logo-spin infinite 20s linear; */
+  }
+}
+
+.myParagraph {
+  max-width: 900px;
+  max-height: 300px;
+  overflow: hidden; /* Hide any overflowing content */
+  text-overflow: ellipsis; /* Add an ellipsis (...) for truncated text */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+.CreateBlog {
+  width: 1000px;
+  max-width: 100%;
+  min-width: 20%;
+}
+
+.Comments {
+  text-align: left;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  width: 1000px;
+}
+
+.comment-divider {
+border: 10px solid black;
+border-radius: 5px;
+}
+
+.authorfield {
+  border: 0px;
+  text-align: left;
+}
+
+.CommentText {
+  border: 3px solid rgb(2, 2, 2);
+  border-radius: 4px;
+  background-color: whitesmoke;
+  color: black;
+  text-align: left ;
+}
+
+.CommentHead {
+  color: white;
+  text-align: left;
+}
+
+.post {
+  font-size: smaller;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  width: 1000px;
+  max-width: 100%;
+  text-align: justify;
+
+}
+
+.postText {
+  white-space: pre-wrap;
+}
+
+.postID {
+    border: 1px solid #ccc;
+    padding: 50px;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    width: 1000px;
+    text-align: justify;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
