@@ -375,14 +375,14 @@ export default function BasicTabTabs() {
               sx={{
                 p: 1,
                 mt:5,
-                height: 400,
+                height: 600,
                 maxHeight: 700,
-                width: 1200,
+                width: 1000,
                 maxWidth:1200,
                 borderRadius: 10,
               }}
               alt="Picture of Initiative Tracker"
-              src="https://i.imgur.com/bqjLOHz.png"
+              src="../Images/initfinder.png"
             ></Box>
           </Grid>
           <Grid
