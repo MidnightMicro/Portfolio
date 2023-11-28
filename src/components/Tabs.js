@@ -7,6 +7,8 @@ import { Button, Grid } from "@mui/material";
 import { useEffect } from "react";
 import ArrowCircleRightOutlinedIcon from "@mui/icons-material/ArrowCircleRightOutlined";
 
+
+
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -69,6 +71,9 @@ export default function BasicTabTabs() {
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
+            variant="scrollable"
+            scrollButtons
+            allowScrollButtonsMobile
           >
             <Tab label="Task Tracker" {...a11yProps(0)} />
             <Tab label="GroundHog Games" {...a11yProps(1)} />
@@ -82,47 +87,57 @@ export default function BasicTabTabs() {
         <Grid
           container
           xs={12}
+
           sx={{
             display: "flex",
-            height:750,
-            maxWidth:'100%',
+            height:'100%',
+            maxHeight:1000,
+            maxWidth:1200,
+            width:'100%',
+            minWidth:300,
             flexDirection: "row",
             backgroundColor: "rgba(14,58,87)",
           }}
         >
-          <Grid item xs>
-            <Box
-              component="img"
-              sx={{
+          <Grid item xs={8}>
+            <img
+              style={{
                 p: 1,
                 mt:2,
-                height:700,
+                height:'100%',
+                minHeight:200,
+                maxHeight:700,
                 width: '100%',
-                maxWidth:1000,
+                maxWidth:800,
+                minWidth:350,
                 borderRadius:5,
               }}
-              alt="Picture of Task Tracker"
+              alt="Task Tracker"
               src="https://i.imgur.com/soEteaN.png"
-            ></Box>
+            ></img>
           </Grid>
           <Grid
-            item
-            xs={4}
+            container
+            xs
             sx={{
               display: "flex",
               flexDirection: "column",
               p:1,
-              borderColor: "white",
               borderRadius: 2,
-              color: "white",
+              
             }}
           >
-            <Grid item xs={12} sx={{
+            <Grid 
+            item 
+            xs={12}
+             sx={{
             display: "flex",
             flexDirection: "column",
             height:'100%',
-            maxHeight:700,
-            maxWidth:'100%',
+            maxHeight:400,
+            maxWidth:800,
+            minWidth:200,
+            width:'100%',
             p:1,
             border: 1,
             overflow:'auto',
@@ -133,9 +148,9 @@ export default function BasicTabTabs() {
             <Typography variant="h6" sx={{ textAlign: "justify" }}>
               Task Tracker was designed with cos-players in mind. For Dragon Con
               2023 in Atlanta, I sought to create a cosplay out of foam - not
-              knowing what all was needed. I created this tracker so that it
-              serve the practical usage of allow me to keep track of what pieces
-              were needed to be completed, as well as a better idea of how much
+              knowing what all was needed. I created this tracker so that it will
+              serve the practical usage of allowing me to keep track of what pieces
+               needed to be completed, as well as a better idea of how much
               material I would need to finish each piece and how long the user
               would have by providing a due date.
               <br></br>
@@ -154,13 +169,19 @@ export default function BasicTabTabs() {
   sx={{
     display: "flex",
     flexDirection: "column",
+    height:'100%',
+    maxHeight:200,
+    minHeight:100,
+    width:'100%',
+    maxWidth:400,
+    minWidth:300,
     alignItems: "center", // Align content in the center
     border: 1,
     borderColor: "white",
     borderRadius: 2,
     backgroundColor: "rgba(14,58,87)",
     margin: 0,
-    padding: 2, // Add padding to the container
+    padding: 2,
   }}
 >
   <Button
@@ -223,51 +244,57 @@ export default function BasicTabTabs() {
         <Grid
           container
           xs={12}
+
           sx={{
             display: "flex",
-            height:750,
-            maxwidth:'100%',
+            height:'100%',
+            maxHeight:1000,
+            maxWidth:1200,
+            width:'100%',
+            minWidth:300,
             flexDirection: "row",
             backgroundColor: "rgba(14,58,87)",
           }}
         >
-          <Grid item xs>
-            <Box
-              component="img"
-              sx={{
+          <Grid item xs={8}>
+            <img
+              style={{
                 p: 1,
                 mt:2,
                 height:'100%',
+                minHeight:200,
                 maxHeight:700,
-                width:'100%',
-                maxWidth:900,
-                borderRadius: 5,
+                width: '100%',
+                maxWidth:800,
+                minWidth:350,
+                borderRadius:5,
               }}
-              alt="Picture of GroundHog Games"
+              alt="GroundHog Games"
               src="https://i.imgur.com/cnxZ12h.png"
-            ></Box>
+            ></img>
           </Grid>
           <Grid
-            item
-            xs={4}
+            container
+            xs
             sx={{
               display: "flex",
-            flexDirection: "column",
-            p:1,
-            overflow:'auto',
-            borderColor: "white",
-            borderRadius: 2,
-            color: "white",
+              flexDirection: "column",
+              p:1,
+              borderRadius: 2,
+              
             }}
           >
-            <Grid item xs={12} sx={{
+            <Grid item 
+            xs={12}
+             sx={{
             display: "flex",
             flexDirection: "column",
             height:'100%',
-            maxHeight:700,
-            maxWidth:'100%',
+            maxHeight:400,
+            maxWidth:800,
+            minWidth:200,
+            width:'100%',
             p:1,
-      
             border: 1,
             overflow:'auto',
             borderColor: "white",
@@ -293,16 +320,26 @@ export default function BasicTabTabs() {
             </Typography>
             </Grid>
             <Grid
-              item
-              xs
-              sx={{
-                border: 1,
-                borderColor: "white",
-                borderRadius: 2,
-                backgroundColor: "rgba(14,58,87)",
-                
-              }}
-            >
+  item
+  xs={12}
+  sx={{
+    display: "flex",
+    flexDirection: "column",
+    height:'100%',
+    maxHeight:100,
+    minHeight:100,
+    width:'100%',
+    maxWidth:400,
+    minWidth:300,
+    alignItems: "center", // Align content in the center
+    border: 1,
+    borderColor: "white",
+    borderRadius: 2,
+    backgroundColor: "rgba(14,58,87)",
+    margin: 0,
+    padding: 2,
+  }}
+>
                 <Button
     sx={{ fontSize: 40, color: "white", backgroundColor: "transparent", border: "none", cursor: "pointer" }}
     onClick={() => window.open("https://lelarry26.github.io/DCProject-1/index.html", "_blank")}
@@ -312,10 +349,11 @@ export default function BasicTabTabs() {
               
             </Grid>
             <Grid
-              container
+              item
               xs
               sx={{
                 display: "flex",
+
                 flexDirection: "row-reverse",
                 backgroundColor: "white",
               }}
@@ -362,47 +400,58 @@ export default function BasicTabTabs() {
       <Grid
           container
           xs={12}
+
           sx={{
-            height:750,
             display: "flex",
+            height:'100%',
+            maxHeight:1000,
+            maxWidth:1200,
+            width:'100%',
+            minWidth:300,
             flexDirection: "row",
             backgroundColor: "rgba(14,58,87)",
           }}
         >
-          <Grid item xs>
-            <Box
-              component="img"
-              sx={{
-                p: 1,
-                mt:5,
-                height: 600,
-                maxHeight: 700,
-                width: 1000,
-                maxWidth:1200,
-                borderRadius: 10,
-              }}
-              alt="Picture of Initiative Tracker"
+          <Grid item xs={8}>
+            <img
+             style={{
+              p: 1,
+              mt:2,
+              height:'100%',
+              minHeight:200,
+              maxHeight:700,
+              width: '100%',
+              maxWidth:800,
+              minWidth:350,
+              borderRadius:5,
+            }}
+              alt="Initiative Tracker"
               src="../Images/initfinder.png"
-            ></Box>
+            ></img>
           </Grid>
           <Grid
-            item
-            xs={4}
+            container
+            xs
             sx={{
               display: "flex",
               flexDirection: "column",
               p:1,
-              borderColor: "white",
-              color: "white",
+              borderRadius: 2,
+              
             }}
           >
 
-            <Grid item xs={12} sx={{
+            <Grid 
+            item 
+            xs={12}
+             sx={{
             display: "flex",
             flexDirection: "column",
             height:'100%',
-            maxHeight:600,
-            maxWidth:'100%',
+            maxHeight:400,
+            maxWidth:800,
+            minWidth:200,
+            width:'100%',
             p:1,
             border: 1,
             overflow:'auto',
@@ -410,6 +459,8 @@ export default function BasicTabTabs() {
             borderRadius: 2,
             color: "white",
           }}> 
+
+
             <Typography variant="h6" sx={{ textAlign: "justify",overflow:'auto'}}>
               Initiative Finder was created for the TableTop Role-Playing Game called Pathfinder. Our objective for this project was to enable a Game Master to be able to create/edit and delete characters and monsters for an encounter in the game. With that in mind, there is also functionality that enables the users to track the units various statistics, as well as bonuses or other various upgrades or negative effects currently on that particular character. 
               <br></br>
@@ -418,30 +469,36 @@ export default function BasicTabTabs() {
             </Typography>
             </Grid>
             <Grid
-              item
-              xs
-              sx={{
-                display: "flex",
+  item
+  xs={12}
+  sx={{
+    display: "flex",
     flexDirection: "column",
+    height:'100%',
+    maxHeight:100,
+    minHeight:100,
+    width:'100%',
+    maxWidth:400,
+    minWidth:300,
     alignItems: "center", // Align content in the center
     border: 1,
     borderColor: "white",
     borderRadius: 2,
     backgroundColor: "rgba(14,58,87)",
     margin: 0,
-    padding: 2, // Add padding to the container
+    padding: 2,
   }}
-            >
-                <Button
-                disabled
+>  
+    <Button
     sx={{ fontSize: 40, color: "white", backgroundColor: "transparent", border: "none", cursor: "pointer" }}
-    onClick={() => window.open("https://task-tracker-64zj.onrender.com/", "_blank")}
+    onClick={() => window.open("https://initfindr.onrender.com/", "_blank")}
   >
-    <Typography sx={{color:'grey',fontSize:30}}>Currently in progress</Typography>
+    Try it Out!
   </Button>
+
 </Grid>
             <Grid
-              container
+              item
               xs
               sx={{
                 display: "flex",
